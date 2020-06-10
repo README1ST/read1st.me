@@ -1,4 +1,4 @@
-baseURL = "https://readme1st.github.io/read1st.me"
+baseURL = "https://readme1st.github.io/read1st.me/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "codex"
