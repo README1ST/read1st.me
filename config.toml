@@ -1,6 +1,32 @@
 baseURL = "https://readme1st.github.io/read1st.me/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "codex"
+title = "README1ST"
+theme = "smol"
 publishDir = "docs"
 canonifyURLs = true
+
+# Header
+[menu]
+  [[menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 1
+
+  [[menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        url = "/categories/"
+        weight = 2
+
+  [[menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 3
+
+# Footer
+  [[menu.footer]]
+        name = "Github"
+        url = "https://github.com/README1ST"
+        weight = 1
