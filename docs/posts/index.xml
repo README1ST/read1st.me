@@ -12,21 +12,12 @@
     
     
     <item>
-      <title>This is a Blog Post</title>
-      <link>https://readme1st.github.io/read1st.me/posts/bdgsf/</link>
+      <title>&#34;A YouTube playlist but everytime someone adds a tune to a Facebook group it updates too&#34;</title>
+      <link>https://readme1st.github.io/read1st.me/posts/updating-yt-playlist/</link>
       <pubDate>Fri, 12 Jun 2020 17:07:24 +0100</pubDate>
       
-      <guid>https://readme1st.github.io/read1st.me/posts/bdgsf/</guid>
-      <description>A summary of a blog post</description>
-    </item>
-    
-    <item>
-      <title>This is a Blog Post</title>
-      <link>https://readme1st.github.io/read1st.me/posts/bdgsf-copy/</link>
-      <pubDate>Fri, 12 Jun 2020 17:07:23 +0100</pubDate>
-      
-      <guid>https://readme1st.github.io/read1st.me/posts/bdgsf-copy/</guid>
-      <description>A summary of a blog post</description>
+      <guid>https://readme1st.github.io/read1st.me/posts/updating-yt-playlist/</guid>
+      <description>If you&amp;rsquo;re anything like me then you might find you spend a bit too much time on Facebook on various music groups. A mate of mine who runs one of these music groups was meticulously adding every track posted in the group to a YouTube playlist. I sought out to make this process less painful and fully automated. Here is a short guide outlining how you can set up the same thing for your Facebook group, as long as Zuckerburg decides not to change the rules&amp;hellip;</description>
     </item>
     
   </channel>

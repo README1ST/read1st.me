@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>&#34;A YouTube playlist but everytime someone adds a tune to a Facebook group it updates too&#34;</title>
+	
+	
+	<link rel="stylesheet" href="https://readme1st.github.io/read1st.me/css/style.css">
+	
+</head>
+<body>
+	<header>
+	===============<br>
+	== <a href="https://readme1st.github.io/read1st.me/">README1ST</a> ==<br>
+	===============
+	<div style="float: right;"></div><br>
+	<p>
+	<nav>
+			<a href="https://readme1st.github.io/read1st.me/"><b>Start</b></a>.
+			
+			
+			<a href="https://readme1st.github.io/read1st.me/posts/"><b>Posts</b></a>.
+			
+			<a href="https://readme1st.github.io/read1st.me/categories/"><b>Categories</b></a>.
+			
+			<a href="https://readme1st.github.io/read1st.me/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>&#34;A YouTube playlist but everytime someone adds a tune to a Facebook group it updates too&#34;</h1>
+			
+				<b><time>12.06.2020 17:07</time></b>
+			
+		       
+
+			<div>
+				<p>If you&rsquo;re anything like me then you might find you spend a bit too much time on Facebook on various music groups.
+A mate of mine who runs one of these music groups was meticulously adding every track posted in the group to a YouTube playlist.
+I sought out to make this process less painful and fully automated. Here is a short guide outlining how you can set up the same thing for your Facebook group, as long as Zuckerburg doesn&rsquo;t change the rules&hellip;</p>
+<p>To get this set up you will need three things:</p>
+<ol>
+<li>An <a href="https://www.integromat.com/">integromat.com</a> account.</li>
+<li>A Facebook account that is the admin of the Facebook group you want to scrape the videos from.</li>
+<li>A YouTube account for the playlist to live on.</li>
+</ol>
+<h2 id="integromat-scenario">Integromat Scenario</h2>
+<p>This first thing that we&rsquo;ll be getting set up is something called an Integromat Scenario, this will be the bulk of the work with the only others things to do being connecting it to the right places in Facebook and YouTube.</p>
+<ol>
+<li>To create the scenario in integromat you will click the &lsquo;Create a new scenario&rsquo; button on the dashboard, skip the service integration that pops up.</li>
+<li>Download this <a href="https://readme1st.github.io/read1st.me/blueprint.json">blueprint file.</a> (Right click -&gt; save link as)</li>
+<li>Once you&rsquo;ve opened that up you will click the &lsquo;&hellip;&rsquo; button labelled more and click &lsquo;Import Blueprint&rsquo;, select the blueprint file you downloaded in the previous step.</li>
+<li>You should now see modules in your scenario. Click on the Facebook groups module and add a connection to your Facebook account which should open a Facebook window, click &lsquo;OK&rsquo;.</li>
+<li>Now on the Facebook groups module you will be able to choose the Facebook group you want to scrape. Make sure you also set the limit to &lsquo;999&rsquo;. You will be prompted to choose where you start scraping posts from, if you want Youtube links previously posted choose &lsquo;All&rsquo;.</li>
+<li>For integromat to have access to your group you will need to add the Integromat App. As an admin of the Facebook group you will need to &lsquo;Edit group settings&rsquo; and click &lsquo;Add Apps&rsquo;. At the time of writing you will need to wait a while for this to load&hellip; Once loaded search for &lsquo;Integromat&rsquo; and add this app.</li>
+<li>Click on the YouTube module and add a Google connection to the Youtube channel your playlist lives on.</li>
+<li>Before the YouTube connection can work you will need to follow the instructions in this <a href="https://support.integromat.com/hc/en-us/articles/360025257393-Connecting-YouTube-to-Integromat-via-Google-OAuth-Client">link</a>. Once you&rsquo;ve sorted that you will need to paste in the client ID and secret you created into the advanced settings of the YouTube module. You may need to click &lsquo;Proceed unsafe&rsquo; when prompted that the app is not verified.</li>
+<li>Now choose your playlist in the youtube module and for Video ID click &lsquo;Link&rsquo;.</li>
+<li>If the text parser module is not working, try deleting what is currently in the text field and click &lsquo;Link&rsquo;. You will also want to do this for the filter between the modules, &ldquo;youtube link&rdquo;.</li>
+<li>You can change the schedule for this scenario by clicking the clock on the facebook module. I would recommend running this on the Every day setting.</li>
+</ol>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="https://readme1st.github.io/read1st.me/posts/updating-yt-playlist/">&#34;A YouTube playlist but everytime someone adds a tune to a Facebook group it updates too&#34;</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2020 <a href="https://readme1st.github.io/read1st.me/"><b>README1ST</b></a>.
+	<a href="https://github.com/README1ST"><b>Github</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>

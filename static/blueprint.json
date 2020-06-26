@@ -1,0 +1,163 @@
+{
+    "name": "updating-yt-playlist",
+    "flow": [
+        {
+            "id": 8,
+            "module": "facebook-groups:WatchPosts",
+            "version": 3,
+            "metadata": {
+                "designer": {
+                    "x": -40,
+                    "y": -42,
+                    "messages": [
+                        {
+                            "category": "setup",
+                            "severity": "error",
+                            "message": "Field 'Connection' is not filled."
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 4,
+            "module": "regexp:Parser",
+            "version": 1,
+            "parameters": {
+                "pattern": "(?:youtube(?:-nocookie)?\\.com\\/(?:[^\\/\\n\\s]+\\/\\S+\\/|(?:v|e(?:mbed)?)\\/|\\S*?[?&]v=)|youtu\\.be\\/)([a-zA-Z0-9_-]{11})",
+                "global": false,
+                "sensitive": true,
+                "multiline": false,
+                "singleline": false,
+                "continueWhenNoRes": false
+            },
+            "filter": {
+                "name": "youtube link",
+                "conditions": [
+                    [
+                        {
+                            "a": "{{1.link}}",
+                            "b": "youtu",
+                            "o": "text:contain"
+                        }
+                    ]
+                ]
+            },
+            "mapper": {
+                "text": "{{1.link}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 299,
+                    "y": -193,
+                    "messages": [
+                        {
+                            "category": "reference",
+                            "severity": "error",
+                            "message": "Module references non-existing module '1'."
+                        }
+                    ]
+                },
+                "parameters": [
+                    {
+                        "name": "pattern",
+                        "type": "text",
+                        "required": true,
+                        "label": "Pattern"
+                    },
+                    {
+                        "name": "global",
+                        "type": "boolean",
+                        "label": "Global match",
+                        "required": true
+                    },
+                    {
+                        "name": "sensitive",
+                        "type": "boolean",
+                        "label": "Case sensitive",
+                        "required": true
+                    },
+                    {
+                        "name": "multiline",
+                        "type": "boolean",
+                        "label": "Multiline",
+                        "required": true
+                    },
+                    {
+                        "name": "singleline",
+                        "type": "boolean",
+                        "label": "Singleline",
+                        "required": true
+                    },
+                    {
+                        "name": "continueWhenNoRes",
+                        "label": "Continue the execution of the route even if the module finds no matches",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Text"
+                    }
+                ],
+                "interface": [
+                    {
+                        "type": "text",
+                        "name": "$1",
+                        "label": "$1"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "youtube:ActionAddVideoToPlaylist",
+            "version": 3,
+            "metadata": {
+                "designer": {
+                    "x": 648,
+                    "y": -139,
+                    "messages": [
+                        {
+                            "category": "setupreq",
+                            "severity": "error",
+                            "message": "The module is not set up."
+                        }
+                    ]
+                }
+            },
+            "onerror": [
+                {
+                    "id": 5,
+                    "module": "builtin:Ignore",
+                    "version": 1,
+                    "metadata": {
+                        "designer": {
+                            "x": 819,
+                            "y": 128
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": false,
+            "sequential": false,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.integromat.com"
+    }
+}
