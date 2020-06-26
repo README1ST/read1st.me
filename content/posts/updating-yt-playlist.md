@@ -1,6 +1,6 @@
 ---
 title: "\"A YouTube playlist but everytime someone adds a tune to a Facebook group it updates too\""
-date: 2020-06-12T17:07:24+01:00
+date: 2020-06-26T19:27:00+01:00
 summary: "If you're anything like me then you might find you spend a bit too much time on Facebook on various music groups.
           A mate of mine who runs one of these music groups was meticulously adding every track posted in the group to a YouTube playlist. 
           I sought out to make this process less painful and fully automated. Here is a short guide outlining how you can set up the same thing for your Facebook group, as long as Zuckerburg decides not to change the rules..."
